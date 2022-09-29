@@ -1,15 +1,16 @@
 <template>
-  <div class="text-center pt-3">
-    <h1>HomePage</h1>
-    <MainComponent />
+  <div>
+    <HeaderComponent />
   </div>
 </template>
 
 <script>
-import MainComponent from '../components/Main.vue';
+import HeaderComponent from '../components/HeaderComponent.vue';
+
 export default {
    components: {
-      MainComponent
+    HeaderComponent
+     
    }
 }
 </script>

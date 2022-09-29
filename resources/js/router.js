@@ -8,13 +8,13 @@ const router = new VueRouter({
     routes: [
        {
           path: '/home',
-          name: 'home',
-          component: 'HomePage'
+          name: 'HomePage',
+          component: HomePage
        },
        {
         path: '/tag',
-        name: 'tag',
-        component: 'TagPage'
+        name: 'TagPage',
+        component: TagPage
      },
    ] 
 });

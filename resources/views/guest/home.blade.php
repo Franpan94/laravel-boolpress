@@ -75,7 +75,7 @@
 </head>
 <body>
     <body>
-        <div class="flex-center position-ref ms_padding">
+        
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -89,7 +89,7 @@
                     @endauth
                 </div>
             @endif
-        </div>
+        
     </body>
     <div id="root"></div>
 </body>
