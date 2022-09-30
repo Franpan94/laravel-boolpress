@@ -62,6 +62,17 @@ class PostController extends Controller
         } else return response('', 404);
     }
 
+    public function search($title){
+        $posts = Post::with('user')->where('title', $title)->get();
+
+        if(count($posts) > 0){
+            return response()->json([
+                'respone'=>true,
+                'results'=>$posts
+            ]);
+        } else return response('', 204);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

@@ -11,7 +11,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
    .style > a{
      color: #636b6f;
      padding: 0 25px;
