@@ -4,7 +4,7 @@
       <img :src="validURL(post.post_image) ? post.post_image : 'storage/' + post.post_image" :alt="post.title" class="w-50 pt-2 pb-2">
       <p class="pt-2">
         {{post.post_content.substring(0, 150)}}
-         <router-link class="ms_link" to="/SinglePost/:id">...altro</router-link>
+         <router-link class="ms_link" :to="'SinglePost/' + post.id">...altro</router-link>
       </p>
    </div>
   
@@ -22,7 +22,6 @@ export default {
            if(!regex .test(str)) {
               return false;
             } else return true;
-  
         }
    },
 }

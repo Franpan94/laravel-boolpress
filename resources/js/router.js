@@ -12,12 +12,6 @@ const router = new VueRouter({
          name: 'HomePage',
          component: HomePage
       },
-
-      {
-         path: '/SinglePost/:id',
-         name: 'SinglePost',
-         component: SinglePost
-      },
       
       {
          path: '/tag',
@@ -25,7 +19,11 @@ const router = new VueRouter({
          component: TagPage
       },
 
-      
+      {
+         path: '/SinglePost/:id',
+         name: 'SinglePost',
+         component: SinglePost
+      },
    ] 
 });
 
