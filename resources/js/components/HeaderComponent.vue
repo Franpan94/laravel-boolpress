@@ -1,7 +1,8 @@
 <template>
   <header class="style padding-left">
-    <router-link to="/home">Home</router-link>
+    <router-link to="/home">Post</router-link>
     <router-link to="/tag">Tag</router-link>
+    <router-link to="/posts/search">Ricerca Post</router-link>
   </header>
 </template>
 

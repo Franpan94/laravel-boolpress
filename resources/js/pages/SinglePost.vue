@@ -5,7 +5,7 @@
     </div>
     <div v-else class="ms_pt-6 text-center container pb-3">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 pb-4">
           <h1 class="font-weight-bold">{{ post.title }}</h1>
           <img
             :src="validURL(post.post_image) ? post.post_image : '/storage/' + post.post_image"
@@ -43,7 +43,6 @@ export default {
       const id = this.$route.params.id;
       axios.get(`/api/posts/${id}`).then((response) => {
         this.post = response.data.result;
-        console.log(this.post);
         this.isLoading = false;
       });
     },

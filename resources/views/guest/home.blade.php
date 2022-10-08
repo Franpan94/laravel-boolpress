@@ -68,6 +68,10 @@
             text-transform: uppercase;
         }
 
+        .ms_pt-8{
+          padding-top: 8rem;
+        }
+
         .m-b-md {
             margin-bottom: 30px;
         }
@@ -89,7 +93,7 @@
                     @endauth
                 </div>
             @endif
-        
+            <h1 class="text-center ms_pt-8">Laravel-BoolPress</h1>
     </body>
     <div id="root"></div>
 </body>

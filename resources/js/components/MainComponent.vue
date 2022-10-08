@@ -5,20 +5,20 @@
     </div>
     <div v-else class="container text-center">
       <div class="row">
-        <PostCardComponent v-for="post in posts" :key="post.id" :post='post' />
+        <PostCard v-for="post in posts" :key="post.id" :post='post' />
       </div>
     </div>
   </main>
 </template>
 
 <script>
-import PostCardComponent from './PostCard.vue';
+import PostCard from './PostCard.vue';
 import LoaderComponent from './LoaderComponent.vue';
 import axios from 'axios';
 
 export default {
      components: {
-        PostCardComponent,
+        PostCard,
         LoaderComponent
      },
      data: function(){

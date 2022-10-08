@@ -63,7 +63,8 @@ class PostController extends Controller
     }
 
     public function search($title){
-        $posts = Post::with('user')->where('title', $title)->get();
+        $title = strtolower($title);
+        $posts = Post::with('user')->where('title', 'LIKE', '%' .  $title . '%')->get();
 
         if(count($posts) > 0){
             return response()->json([

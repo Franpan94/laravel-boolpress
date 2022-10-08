@@ -24,6 +24,8 @@ Route::middleware('auth')
   ->prefix('admin')
   ->group(function(){
   Route::get('/', 'HomeController@index')->name('home');
+  Route::get('/posts/deleted', 'PostController@softDeleted')->name('posts.deleted');
+  Route::patch('/posts/deleted/{id}', 'PostController@restore')->name('posts.restore');
   Route::resource('/posts', 'PostController');
   Route::resource('/tags', 'TagController');
 });

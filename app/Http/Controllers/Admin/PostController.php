@@ -81,9 +81,9 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        //
+        $post = Post::withTrashed()->findOrFail($id);
         return view('admin.posts.show',compact('post'));
     }
 
@@ -149,5 +149,16 @@ class PostController extends Controller
         //
         $post->delete();
         return redirect()->route('admin.posts.index')->with('delete', $post->title . ' ' . 'é stato eliminato con successo');
+    }
+
+    public function softDeleted(){
+        $posts = Post::onlyTrashed()->get();
+        return view('admin.posts.deleted', compact('posts'));
+    }
+
+    public function restore($id){
+        $post = Post::onlyTrashed()->findOrFail($id);
+        $post->restore();
+        return redirect()->route('admin.posts.deleted')->with('restore', $post->title . ' ' . 'é stato ripristinato con successo');
     }
 }
